@@ -2,13 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
   <title>CountryEJS</title>
 </head>
 <body>
-  <form action="/result" method="POST">
-    <p>Country: <input type="text" name = "country" value = "Estonia"></p>
-    <a href="/result"><button>Go!</button></a>
-  </form>
+  <style>
+    body, html {
+    height: 100%;
+    display: grid;
+    }
+
+    .container {
+    margin: auto;
+    }
+  </style>
+
+  <div class="container">
+    <div class="row vertical-center">
+      <form action="/result" method="POST">
+      <select name = "country" class="form-control">
+        <option value='Estonia'>Estonia</option>
+        <option value='Latvia'>Latvia</option>
+        <option value='Lithuania'>Lithuania</option>
+      </select>
+      <a href="/result"><button type="submit"  class="btn btn-success">Go!</button></a>
+    </form>
+  </div>
+  </div>
 </body>
 </html>
